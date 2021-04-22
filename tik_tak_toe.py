@@ -2,7 +2,6 @@
 import random
 import os
 from typing import Union
-from time import sleep
 
 
 # Function to clear output
