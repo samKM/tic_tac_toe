@@ -229,7 +229,7 @@ def main():
                 players.reverse()
 
             for player in players:
-                print(f'{player} : {player.get_stats()}')
+                print(f'{player.get_stats()}')
 
             game_over = gameon_choice()
             if not game_over:
