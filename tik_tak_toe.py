@@ -115,13 +115,13 @@ def check_board(board, avatar: str):
 
 
 # Function to update board
-def update_game_board(board, position: int, player: Player) -> Union[list[str], bool]:
+def update_game_board(board, position: int, avatar: str) -> Union[list[str], bool]:
 
     if board[position] != ' ':
         print(f'Board position has already been taken. Please make another choice. ')
         return False
 
-    board[position] = player.avatar
+    board[position] = avatar
 
     return board
 
@@ -202,7 +202,7 @@ def main():
 
                 valid_position = False
                 while not valid_position:
-                    temp_board = update_game_board(board, position, player)
+                    temp_board = update_game_board(board, position, player.avatar)
                     if temp_board != False:
                         board = temp_board
                         valid_position = True
